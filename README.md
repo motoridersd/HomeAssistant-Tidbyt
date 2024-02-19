@@ -4,9 +4,9 @@ A collection of .star files and scripts to integrate a Tidbyt with Home Assistan
 
 There is no native way to allow these two to communicate, so I have been using [pixlet](https://github.com/tidbyt/pixlet) in an LXC container in Proxmox to generate and push webp images to my Tidbyt. I just discovered a new development that allows running a local server with the Tidbyt API [Pixbyt](https://github.com/DouweM/pixbyt) that I need to explore to update what I currently do.
 
-I have three applets:
+I have four applets:
 
-## Home Assistant Now Playing
+## Home Assistant Now Playing for Music
 
 ![image](https://github.com/motoridersd/HomeAssistant-Tidbyt/assets/5197858/1f3d775e-3bbb-45cf-a0b3-d764b19e183b)
 
@@ -31,6 +31,12 @@ This app exists in the Tidbyt Community Repository, but I've modified mine with 
 ![image](https://github.com/motoridersd/HomeAssistant-Tidbyt/assets/5197858/4a8831a5-3558-4234-90b4-9378f662a47c)
 
 I used the Solar Manager applet (https://github.com/tidbyt/community/tree/main/apps/solarmanagerch) as a source, mainly because I liked the screens implemented in there. I modified it to pull the data from Home Assistant instead of a portal. This allows us to get Home Assistant connected to whatever provider you have (Enphase Envoy in my case, and this data is pulled locally).
+
+## Plex Now Playing
+
+![image](https://github.com/motoridersd/HomeAssistant-Tidbyt/assets/5197858/52dd6d68-5b95-4641-898c-442d1919d228)
+
+This is a similar code to what is used for music, but it pulls the Media Image as a poster. The Tidbyt fonts can be too big for media titles though. Haven't found a way to make some of these longer options fit, and I don't have a dynamic way to accomodate the text yet. So it's more of a proof of concept that needs some work.
 
 ## LXC Container running Pixlet
 
