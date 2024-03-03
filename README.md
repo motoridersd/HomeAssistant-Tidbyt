@@ -24,7 +24,11 @@ The code includes logic to display all kinds of info. I currently use it with a 
 
 ![image](https://github.com/motoridersd/HomeAssistant-Tidbyt/assets/5197858/a0c6fcbf-8c91-453e-9117-13c0c635ecaf)
 
-This app exists in the Tidbyt Community Repository, but I've modified mine with different sources as well as adding my own tail images. The community app has a very limited number of tails, and their approval process is lengthy. My version will also show shapes for aircraft that does not have a tail log. I forget where I got this code from, but it was someone that also modified the original community app by eddiechen
+This app exists in the Tidbyt Community Repository, but I've modified it to use the Home Assistant FlightRadar24 integration. No paid API is required. The tail logos are pulled from Airhex, so there is no need to keep the tail DB up to date. A flipped logo is used by default, but a mirrored version can be used. Home Assistant drives the update of the display based on what aircraft are of interest (I have filters for commercial airliners). The FlightRadar24 integration sets up a radius using coordinates that the user defines. It can also filter flights using an altitude min/max range. 
+
+Multiple FlightRadar24 entities can be added, and thus multiple versions of the app could be run. For example, one could run it for flights at LAX but a separate one for LHR. Each applet would use a different entity in Home Assistant.
+
+I use Home Assistant to trigger the update via an SSH switch. Need to update to use webhooks. If no flights are detected, the app is deleted. Scripts an automations are in the flightsnearby folder. The older API based applet has been moved to flightsnearby_API.
 
 ## Solar
 
