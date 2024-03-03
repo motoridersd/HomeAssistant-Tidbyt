@@ -2,8 +2,7 @@
 Applet: Flights Nearby HA Flightradar
 Summary: Flights Nearby HA
 Description: Flights nearby using data from Flightradar integration in HA
-Author: Jorge d'Argence
-"""
+Author: motoridersd
 
 load("render.star", "render")
 load("encoding/base64.star", "base64")
