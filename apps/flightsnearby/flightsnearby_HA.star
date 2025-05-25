@@ -388,7 +388,10 @@ def filter_flight(flight):
     ])
 
 def main(config):
-    #If hardcoding HA info in applet, replace values below with yours
+    #If hardcoding HA info in applet, replace values below with yours. REMOVE EVERYTHING AFTER THE = and add your values
+    #For example, ha_server = "http://192.168.1.100:8123"
+    #The config.get strings are only used for serving the applet via pixlet serve
+    #ha_server, entity_id and token have to be updated with your own values.
     ha_server = config.get("homeassistant_server") #Don't forget to include a port at the end of the URL if using one
     entity_id = config.get("homeassistant_entity_id") #The FlightRadar24 Integration sensor, default is 'sensor.flightradar24_current_in_area' 
     token = config.get("homeassistant_token") #Your long lived access token
